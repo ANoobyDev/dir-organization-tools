@@ -27,4 +27,4 @@ for file in list_of_files:
         num = num + str(i)
 
     print(file + f" --> {str(num)}.{xtn}") 
-    os.system(f"mv '{file}' '{str(num)}.{xtn}'")
+    os.system(f"mv '{file}' '{str(num)}.{xtn}' 2>/dev/null")
