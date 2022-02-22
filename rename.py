@@ -1,16 +1,14 @@
 import os
 
-xtn = input("What extension?:\n")
-
-dir_name = '.'
-
-list_of_files = sorted( filter( lambda x: os.path.isfile(os.path.join(dir_name, x)),os.listdir(dir_name) ) )
+list_of_files = sorted( filter( lambda x: os.path.isfile(os.path.join(".", x)),os.listdir(".") ) )
 
 nums = []
 for i in range(len(str(len(list_of_files)))):
     nums += [0]
 
 for file in list_of_files:
+    file2 = file
+    xtn = file2.split(".")[1]
     nums[-1] += 1
     if nums[-1] == 10:
         nums[-1] = 0
