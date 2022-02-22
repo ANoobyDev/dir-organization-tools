@@ -7,8 +7,10 @@ for i in range(len(str(len(list_of_files)))):
     nums += [0]
 
 for file in list_of_files:
+    # Gets the extension
     file2 = file
     xtn = file2.split(".")[1]
+    
     nums[-1] += 1
     if nums[-1] == 10:
         nums[-1] = 0
