@@ -8,9 +8,14 @@ for i in range(len(str(len(list_of_files)))):
 
 for file in list_of_files:
     # Gets the extension
-    file2 = file
-    xtn = file2.split(".")[1]
+    preFile = file
+    file = file.split(".")
     
+    try:
+        xtn = "." + file[1]
+    except:
+        xtn = "." + input(f"Extension for {file[0]}?: ")
+
     nums[-1] += 1
     if nums[-1] == 10:
         nums[-1] = 0
@@ -26,5 +31,5 @@ for file in list_of_files:
     for i in nums:
         num = num + str(i)
 
-    print(file + f" --> {str(num)}.{xtn}") 
-    os.system(f"mv '{file}' '{str(num)}.{xtn}' 2>/dev/null")
+    print(preFile + f" --> {str(num)}{xtn}") 
+    os.system(f"mv '{file[0]}' '{str(num)}{xtn}' 2>/dev/null")
