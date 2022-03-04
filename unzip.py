@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 
 files=os.listdir()

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import os
 
 extension=input("Extension of images: ")
