@@ -8,6 +8,10 @@ if len(argv) == 2:
 else:
     dirc = "."
 
+# Check if last char of the directory is '/', and if it is, remove it
+if dirc[-1] == '/':
+    dirc[-1] == ''
+
 # Get sorted list of the dir
 list_of_files = sorted(os.listdir(dirc))
 
@@ -41,4 +45,4 @@ for file in list_of_files:
         num = num + str(i)
 
     print(preFile + f" --> {str(num)}{xtn}") 
-    os.system(f"mv '{dirc}{preFile}' '{dirc}{str(num)}{xtn}' 2>/dev/null")
+    os.system(f"mv '{dirc}/{preFile}' '{dirc}/{str(num)}{xtn}'")
